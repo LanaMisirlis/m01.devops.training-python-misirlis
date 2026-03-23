@@ -34,6 +34,10 @@ blocks:
             - cache restore
             - make lint
             - cache store
+      agent:
+        machine:
+          type: e1-standard-2
+          os_image: ubuntu2404
   - name: "\U0001F9EA Test Suite"
     dependencies:
       - "\U0001F6E0️ Setup and Cache"
@@ -43,3 +47,7 @@ blocks:
         - name: "\U0001F7E2 Pytest"
           commands:
             - make test
+      agent:
+        machine:
+          type: e1-standard-2
+          os_image: ubuntu2404
