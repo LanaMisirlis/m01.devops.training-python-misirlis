@@ -20,10 +20,6 @@ blocks:
             - cache restore
             - pip install --cache-dir .pip_cache -r requirements.txt
             - cache store
-      agent:
-        machine:
-          type: e1-standard-2
-          os_image: ubuntu2404
   - name: "\U0001F50D Code Quality"
     dependencies:
       - "\U0001F6E0️ Setup and Cache"
