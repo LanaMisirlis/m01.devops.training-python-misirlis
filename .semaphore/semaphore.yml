@@ -27,8 +27,10 @@ blocks:
       jobs:
         - name: ✨ Lint and Format
           commands:
-            - cache restore
             - make lint
+      prologue:
+        commands:
+          - cache restore
   - name: "\U0001F9EA Test Suite"
     dependencies:
       - "\U0001F6E0️ Setup and Cache"
