@@ -33,7 +33,6 @@ blocks:
           commands:
             - cache restore
             - make lint
-            - cache store
       agent:
         machine:
           type: e1-standard-2
@@ -46,6 +45,7 @@ blocks:
       jobs:
         - name: "\U0001F7E2 Pytest"
           commands:
+            - cache restore
             - make test
       agent:
         machine:
